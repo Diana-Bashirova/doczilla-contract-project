@@ -1,11 +1,27 @@
+# Системные файлы
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Временные файлы
 *.tmp
 *.bak
 *~
+
+# IDE
 .vscode/
 .idea/
+
+# Игнорируем все PDF и DOCX по умолчанию (защита от случайной загрузки)
 *.pdf
 *.docx
+
+# НО разрешаем PDF в папке тестовых данных (исходные КП для AI-извлечения)
+!04_qa_testing/test_data/source_documents/*.pdf
+
+# НО разрешаем DOCX/PDF в папке эталонных экспортов (образцы готовых договоров)
+!02_document_template/export_samples/*.pdf
+!02_document_template/export_samples/*.docx
+
+# Секреты
 .env
